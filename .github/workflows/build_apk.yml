@@ -33,4 +33,3 @@ jobs:
         with:
           file: app/build/outputs/apk/debug/app-debug.apk
           tag_name: "Latest APK"
-          draft: true
