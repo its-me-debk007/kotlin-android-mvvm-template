@@ -7,10 +7,12 @@ plugins {
 }
 
 android {
+    // TODO: Set Namespace
     namespace = "com.debk007.template"
     compileSdk = 34
 
     defaultConfig {
+        // TODO: Set Package Name
         applicationId = "com.debk007.template"
         minSdk = 24
         targetSdk = 33
@@ -22,7 +24,7 @@ android {
             useSupportLibrary = true
         }
 
-        // TODO: Change Base URL
+        // TODO: Set Base URL
         buildConfigField("String", "BASE_URL", "\"https://dummyjson.com/\"")
     }
 
@@ -82,6 +84,7 @@ dependencies {
     kapt(libs.hilt.kapt)
     implementation(libs.hilt.navigation.compose)
     implementation (libs.lifecycle.compose)
+    implementation(libs.navigation.compose)
     debugImplementation(libs.chucker.debug)
     releaseImplementation(libs.chucker.release)
 }

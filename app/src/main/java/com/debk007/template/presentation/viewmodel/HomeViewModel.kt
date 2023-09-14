@@ -18,8 +18,9 @@ class HomeViewModel @Inject constructor(
     private val repository: Repository
 ) : ViewModel() {
 
-    private val _mandateState: MutableState<ApiState<ProductDetailsDTO>> = mutableStateOf(ApiState.Loading())
-    val mandateState: State<ApiState<ProductDetailsDTO>> get() = _mandateState
+    // TODO: Set UI State
+    private val _productDetailsState: MutableState<ApiState<ProductDetailsDTO>> = mutableStateOf(ApiState.Loading())
+    val productDetailsState: State<ApiState<ProductDetailsDTO>> get() = _productDetailsState
 
     init {
         getProductDetails()
@@ -27,7 +28,7 @@ class HomeViewModel @Inject constructor(
 
     private fun getProductDetails() {
         viewModelScope.launch(Dispatchers.IO) {
-            _mandateState.value = repository.getProductDetails()
+            _productDetailsState.value = repository.getProductDetails()
         }
     }
 }

@@ -15,6 +15,7 @@ dagger-hilt = "2.46"
 lifecycle-compose = "2.6.2"
 glide = "1.0.0-alpha.1"
 chucker = "4.0.0"
+navigation-compose = "2.7.2"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -47,6 +48,9 @@ hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-com
 
 # Lifecycle Compose
 lifecycle-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "lifecycle-compose" }
+
+# Navigation Compose
+navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation-compose" }
 
 # Glide
 glide = { group = "com.github.bumptech.glide", name = "compose", version.ref = "glide" }

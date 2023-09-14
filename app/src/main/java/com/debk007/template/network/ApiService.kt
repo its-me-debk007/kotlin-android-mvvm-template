@@ -5,6 +5,6 @@ import retrofit2.http.GET
 
 interface ApiService {
 
-    @GET("products/1")
-    suspend fun getProductDetails(): ProductDetailsDTO
+    @GET("products/1") // TODO: Set API Endpoint
+    suspend fun getProductDetails(): ProductDetailsDTO // TODO: Set API Response
 }
