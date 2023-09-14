@@ -9,11 +9,12 @@ lifecycle-runtime-ktx = "2.6.2"
 activity-compose = "1.7.2"
 compose-bom = "2023.09.00"
 retrofit = "2.9.0"
-coroutines = "2.9.0"
+coroutines = "1.7.3"
 hilt-navigation-compose = "1.0.0"
 dagger-hilt = "2.46"
 lifecycle-compose = "2.6.2"
 glide = "1.0.0-alpha.1"
+chucker = "4.0.0"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -32,12 +33,12 @@ ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 material3 = { group = "androidx.compose.material3", name = "material3" }
 
 # Coroutines
-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "retrofit" }
-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "retrofit" }
+coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
 
 # Retrofit
-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "coroutines" }
-moshi-converter = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "coroutines" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+moshi-converter = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit" }
 
 # Dagger Hilt
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "dagger-hilt" }
@@ -49,6 +50,10 @@ lifecycle-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-co
 
 # Glide
 glide = { group = "com.github.bumptech.glide", name = "compose", version.ref = "glide" }
+
+# Chucker
+chucker-debug = { group = "com.github.chuckerteam.chucker", name = "library", version.ref = "chucker" }
+chucker-release = { group = "com.github.chuckerteam.chucker", name = "library-no-op", version.ref = "chucker" }
 
 [plugins]
 com-android-application = { id = "com.android.application", version.ref = "agp" }

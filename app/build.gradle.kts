@@ -23,7 +23,7 @@ android {
         }
 
         // TODO: Change Base URL
-        buildConfigField("String", "BASE_URL", "\"https://www.example.com/v1/api/\"")
+        buildConfigField("String", "BASE_URL", "\"https://dummyjson.com/\"")
     }
 
     buildTypes {
@@ -82,6 +82,8 @@ dependencies {
     kapt(libs.hilt.kapt)
     implementation(libs.hilt.navigation.compose)
     implementation (libs.lifecycle.compose)
+    debugImplementation(libs.chucker.debug)
+    releaseImplementation(libs.chucker.release)
 }
 
 kapt {
