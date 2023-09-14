@@ -13,7 +13,7 @@ coroutines = "1.7.3"
 hilt-navigation-compose = "1.0.0"
 dagger-hilt = "2.46"
 lifecycle-compose = "2.6.2"
-glide = "1.0.0-alpha.1"
+glide = "1.0.0-alpha.6"
 chucker = "4.0.0"
 navigation-compose = "2.7.2"
 
