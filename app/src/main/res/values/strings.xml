@@ -1,3 +1,4 @@
 <resources>
+    // TODO: Set App Name
     <string name="app_name">Kotlin Android Template</string>
 </resources>

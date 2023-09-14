@@ -83,7 +83,6 @@ dependencies {
     implementation(libs.hilt.android)
     kapt(libs.hilt.kapt)
     implementation(libs.hilt.navigation.compose)
-    implementation (libs.lifecycle.compose)
     implementation(libs.navigation.compose)
     debugImplementation(libs.chucker.debug)
     releaseImplementation(libs.chucker.release)

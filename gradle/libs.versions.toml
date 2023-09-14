@@ -12,7 +12,6 @@ retrofit = "2.9.0"
 coroutines = "1.7.3"
 hilt-navigation-compose = "1.0.0"
 dagger-hilt = "2.48"
-lifecycle-compose = "2.6.2"
 glide = "1.0.0-alpha.6"
 chucker = "4.0.0"
 navigation-compose = "2.7.2"
@@ -45,9 +44,6 @@ moshi-converter = { group = "com.squareup.retrofit2", name = "converter-moshi", 
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "dagger-hilt" }
 hilt-kapt = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "dagger-hilt" }
 hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hilt-navigation-compose" }
-
-# Lifecycle Compose
-lifecycle-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "lifecycle-compose" }
 
 # Navigation Compose
 navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation-compose" }
