@@ -32,5 +32,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           file: app/build/outputs/apk/debug/app-debug.apk
-          tags: true
+          tag_name: "Latest APK"
           draft: true
