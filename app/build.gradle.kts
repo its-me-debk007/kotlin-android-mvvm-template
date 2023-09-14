@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.com.android.application)
     alias(libs.plugins.org.jetbrains.kotlin.android)
     kotlin("kapt")
+    alias(libs.plugins.dagger.hilt)
 }
 
 android {
@@ -72,4 +73,17 @@ dependencies {
     androidTestImplementation(libs.ui.test.junit4)
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
+    implementation(libs.retrofit)
+    implementation(libs.moshi.converter)
+    implementation(libs.glide)
+    implementation(libs.coroutines.android)
+    implementation(libs.coroutines.core)
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.kapt)
+    implementation(libs.hilt.navigation.compose)
+    implementation (libs.lifecycle.compose)
+}
+
+kapt {
+    correctErrorTypes = true
 }
