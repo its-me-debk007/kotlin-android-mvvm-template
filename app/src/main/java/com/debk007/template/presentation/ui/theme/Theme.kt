@@ -1,4 +1,4 @@
-package com.debk007.template.ui.theme
+package com.debk007.template.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build

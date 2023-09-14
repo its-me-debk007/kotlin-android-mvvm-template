@@ -1,4 +1,4 @@
-package com.debk007.template.ui.theme
+package com.debk007.template.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

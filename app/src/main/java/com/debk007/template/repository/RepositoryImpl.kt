@@ -9,8 +9,8 @@ class RepositoryImpl @Inject constructor(
     private val apiService: ApiService
 ) : Repository {
 
-    override suspend fun getMandateDetails(): ApiState<ProductDetailsDTO> = try {
-        ApiState.Success(apiService.getDetails())
+    override suspend fun getProductDetails(): ApiState<ProductDetailsDTO> = try {
+        ApiState.Success(apiService.getProductDetails())
     } catch (e: Exception) {
         ApiState.Error(msg = e.message.toString())
     }
