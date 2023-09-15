@@ -20,7 +20,6 @@ A simple+lightweight template for a Jetpack Compose app with Navigation, Retrofi
 - Dependency versions managed `Gradle Version Catalog`
 - `Dependabot` *(with a weekly schedule)*
 - `GitHub Actions` for building apk and uploading artifact
-- Kotlin Static Analysis via `detekt` and `ktlint`
 - Glide *(for image loading)*
 
 
