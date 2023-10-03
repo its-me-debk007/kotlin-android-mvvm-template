@@ -1,4 +1,4 @@
-name: Publish APK
+name: Perform tests and build apk
 
 on:
   push:
@@ -21,6 +21,24 @@ jobs:
 
       - name: Make Gradle executable
         run: chmod +x ./gradlew
+
+      - name: lint check
+        run: ./gradlew lintDebug
+
+      - name: Upload lint check report
+        uses: actions/upload-artifact@v3
+        with:
+          name: lint-results-debug
+          path: app/build/reports/lint-results-debug.html
+
+      - name: Perform unit tests
+        run: ./gradlew test
+
+      - name: Upload unit test report
+        uses: actions/upload-artifact@v3
+        with:
+          name: unit_test_report
+          path: app/build/reports/tests/testDebugUnitTest/
 
       - name: Build Debug APK
         run: ./gradlew assembleDebug
