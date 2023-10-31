@@ -1,6 +1,6 @@
 [versions]
 agp = "8.1.1"
-org-jetbrains-kotlin-android = "1.9.10"
+org-jetbrains-kotlin-android = "1.9.20"
 core-ktx = "1.12.0"
 junit = "4.13.2"
 androidx-test-ext-junit = "1.1.5"
