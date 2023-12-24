@@ -4,8 +4,8 @@ import java.util.Properties
 plugins {
     alias(libs.plugins.com.android.application)
     alias(libs.plugins.org.jetbrains.kotlin.android)
-    kotlin("kapt")
     alias(libs.plugins.dagger.hilt)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -95,13 +95,9 @@ dependencies {
     implementation(libs.coroutines.android)
     implementation(libs.coroutines.core)
     implementation(libs.hilt.android)
-    kapt(libs.hilt.kapt)
+    ksp(libs.hilt.kapt)
     implementation(libs.hilt.navigation.compose)
     implementation(libs.navigation.compose)
     debugImplementation(libs.chucker.debug)
     releaseImplementation(libs.chucker.release)
-}
-
-kapt {
-    correctErrorTypes = true
 }
