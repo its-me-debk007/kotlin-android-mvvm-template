@@ -1,6 +1,6 @@
+import java.io.FileNotFoundException
 import java.util.Properties
 
-@Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
     alias(libs.plugins.com.android.application)
     alias(libs.plugins.org.jetbrains.kotlin.android)
@@ -26,14 +26,20 @@ android {
             useSupportLibrary = true
         }
 
-        val localPropertiesFile = rootProject.file("local.properties")
-        val localProperties = Properties()
-        localProperties.load(localPropertiesFile.inputStream())
+        val baseUrl = try {
+            val localPropertiesFile = rootProject.file("local.properties")
+            val localProperties = Properties()
+            localProperties.load(localPropertiesFile.inputStream())
+
+            localProperties.getProperty("BASE_URL")
+        } catch (e: FileNotFoundException) {
+            "https://dummyjson.com/"
+        }
 
         /* TODO: Add base URL in local.properties file as:-
          *  BASE_URL=https://dummyjson.com/
         */
-        buildConfigField("String", "BASE_URL", "\"${localProperties.getProperty("BASE_URL")}\"")
+        buildConfigField("String", "BASE_URL", "\"${baseUrl}\"")
     }
 
     buildTypes {
