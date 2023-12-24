@@ -1,3 +1,5 @@
+import java.util.Properties
+
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
     alias(libs.plugins.com.android.application)
@@ -24,8 +26,14 @@ android {
             useSupportLibrary = true
         }
 
-        // TODO: Set Base URL
-        buildConfigField("String", "BASE_URL", "\"https://dummyjson.com/\"")
+        val localPropertiesFile = rootProject.file("local.properties")
+        val localProperties = Properties()
+        localProperties.load(localPropertiesFile.inputStream())
+
+        /* TODO: Add base URL in local.properties file as:-
+         *  BASE_URL=https://dummyjson.com/
+        */
+        buildConfigField("String", "BASE_URL", "\"${localProperties.getProperty("BASE_URL")}\"")
     }
 
     buildTypes {
