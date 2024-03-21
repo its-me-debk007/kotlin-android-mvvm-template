@@ -1,4 +1,3 @@
-import java.io.FileNotFoundException
 import java.util.Properties
 
 plugins {
@@ -26,13 +25,14 @@ android {
             useSupportLibrary = true
         }
 
-        val baseUrl = try {
-            val localPropertiesFile = rootProject.file("local.properties")
-            val localProperties = Properties()
+        val localProperties = Properties()
+        val localPropertiesFile = rootProject.file("local.properties")
+
+        val baseUrl = if (localPropertiesFile.exists()) {
             localProperties.load(localPropertiesFile.inputStream())
 
-            localProperties.getProperty("BASE_URL")
-        } catch (e: FileNotFoundException) {
+            localProperties.getProperty("BASE_URL", "https://dummyjson.com/")
+        } else {
             "https://dummyjson.com/"
         }
 
@@ -63,7 +63,7 @@ android {
         buildConfig = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.7"
+        kotlinCompilerExtensionVersion = "1.5.11"
     }
     packaging {
         resources {
