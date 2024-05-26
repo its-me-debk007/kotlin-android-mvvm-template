@@ -1,13 +1,13 @@
 [versions]
-agp = "8.3.1"
-org-jetbrains-kotlin-android = "1.9.23"
-core-ktx = "1.13.0"
+agp = "8.4.1"
+kotlin = "2.0.0"
+core-ktx = "1.13.1"
 junit = "4.13.2"
 androidx-test-ext-junit = "1.1.5"
 espresso-core = "3.5.1"
-lifecycle-runtime-ktx = "2.7.0"
-activity-compose = "1.8.2"
-compose-bom = "2024.04.01"
+lifecycle-runtime-ktx = "2.8.0"
+activity-compose = "1.9.0"
+compose-bom = "2024.05.00"
 retrofit = "2.11.0"
 coroutines = "1.8.0"
 hilt-navigation-compose = "1.2.0"
@@ -15,7 +15,7 @@ dagger-hilt = "2.51.1"
 glide = "1.0.0-beta01"
 chucker = "4.0.0"
 navigation-compose = "2.7.7"
-ksp = "1.9.23-1.0.20"
+ksp = "2.0.0-1.0.21"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -58,9 +58,10 @@ chucker-release = { group = "com.github.chuckerteam.chucker", name = "library-no
 
 [plugins]
 com-android-application = { id = "com.android.application", version.ref = "agp" }
-org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "org-jetbrains-kotlin-android" }
+org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "dagger-hilt" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 
 [bundles]
 
