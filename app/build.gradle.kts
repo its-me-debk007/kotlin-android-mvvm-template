@@ -98,4 +98,5 @@ dependencies {
     implementation(libs.navigation.compose)
     debugImplementation(libs.chucker.debug)
     releaseImplementation(libs.chucker.release)
+    implementation(libs.moshi.kotlin)
 }
