@@ -6,8 +6,6 @@ import com.debk007.template.BuildConfig
 import com.debk007.template.network.ApiService
 import com.debk007.template.repository.Repository
 import com.debk007.template.repository.RepositoryImpl
-import com.squareup.moshi.Moshi
-import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -30,18 +28,12 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun providesRetrofit(okHttpClient: OkHttpClient): ApiService {
-        val moshi = Moshi.Builder()
-            .add(KotlinJsonAdapterFactory())
-            .build()
-
-        return Retrofit.Builder()
-            .baseUrl(BuildConfig.BASE_URL)
-            .addConverterFactory(MoshiConverterFactory.create(moshi))
-            .client(okHttpClient)
-            .build()
-            .create(ApiService::class.java)
-    }
+    fun providesRetrofit(okHttpClient: OkHttpClient): ApiService = Retrofit.Builder()
+        .baseUrl(BuildConfig.BASE_URL)
+        .addConverterFactory(MoshiConverterFactory.create())
+        .client(okHttpClient)
+        .build()
+        .create(ApiService::class.java)
 
     @Provides
     @Singleton

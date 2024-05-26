@@ -89,6 +89,7 @@ dependencies {
     debugImplementation(libs.ui.test.manifest)
     implementation(libs.retrofit)
     implementation(libs.moshi.converter)
+    ksp(libs.moshi.kotlin.codegen)
     implementation(libs.glide)
     implementation(libs.coroutines.android)
     implementation(libs.coroutines.core)
@@ -98,5 +99,4 @@ dependencies {
     implementation(libs.navigation.compose)
     debugImplementation(libs.chucker.debug)
     releaseImplementation(libs.chucker.release)
-    implementation(libs.moshi.kotlin)
 }
