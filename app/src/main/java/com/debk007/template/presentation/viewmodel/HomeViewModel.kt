@@ -19,7 +19,7 @@ class HomeViewModel @Inject constructor(
 ) : ViewModel() {
 
     // TODO: Set UI State
-    private val _productDetailsState: MutableState<ApiState<ProductDetailsDTO>> = mutableStateOf(ApiState.Loading())
+    private val _productDetailsState: MutableState<ApiState<ProductDetailsDTO>> = mutableStateOf(ApiState.Loading)
     val productDetailsState: State<ApiState<ProductDetailsDTO>> get() = _productDetailsState
 
     init {

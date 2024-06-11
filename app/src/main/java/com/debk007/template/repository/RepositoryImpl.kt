@@ -12,6 +12,6 @@ class RepositoryImpl @Inject constructor(
     override suspend fun getProductDetails(): ApiState<ProductDetailsDTO> = try {
         ApiState.Success(apiService.getProductDetails())
     } catch (e: Exception) {
-        ApiState.Error(msg = e.message.toString())
+        ApiState.Error(errorMsg = e.message.toString())
     }
 }

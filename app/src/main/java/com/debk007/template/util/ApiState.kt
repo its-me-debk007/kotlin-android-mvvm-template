@@ -1,12 +1,9 @@
 package com.debk007.template.util
 
-sealed class ApiState<T>(
-    val data: T? = null,
-    val errorMsg: String? = null
-) {
-    class Success<T>(data: T?) : ApiState<T>(data = data)
+sealed class ApiState<out T> {
+    data class Success<out T>(val data: T) : ApiState<T>()
 
-    class Error<T>(msg: String) : ApiState<T>(errorMsg = msg)
+    data class Error(val errorMsg: String) : ApiState<Nothing>()
 
-    class Loading<T> : ApiState<T>()
+    data object Loading : ApiState<Nothing>()
 }
