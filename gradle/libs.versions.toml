@@ -16,7 +16,7 @@ dagger-hilt = "2.51.1"
 glide = "1.0.0-beta01"
 chucker = "4.0.0"
 navigation-compose = "2.7.7"
-ksp = "2.0.0-1.0.22"
+ksp = "2.0.0-1.0.23"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
