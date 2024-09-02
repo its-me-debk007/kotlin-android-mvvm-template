@@ -13,7 +13,9 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
-import retrofit2.converter.moshi.MoshiConverterFactory
+import kotlinx.serialization.json.Json
+import okhttp3.MediaType.Companion.toMediaType
+import retrofit2.converter.kotlinx.serialization.asConverterFactory
 import javax.inject.Singleton
 
 @Module
@@ -30,7 +32,9 @@ object NetworkModule {
     @Singleton
     fun providesRetrofit(okHttpClient: OkHttpClient): ApiService = Retrofit.Builder()
         .baseUrl(BuildConfig.BASE_URL)
-        .addConverterFactory(MoshiConverterFactory.create())
+        .addConverterFactory(
+            Json.asConverterFactory(
+            "application/json; charset=UTF8".toMediaType()))
         .client(okHttpClient)
         .build()
         .create(ApiService::class.java)

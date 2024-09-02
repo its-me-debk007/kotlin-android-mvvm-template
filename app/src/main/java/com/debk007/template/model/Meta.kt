@@ -1,17 +1,17 @@
 package com.debk007.template.model
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
-@JsonClass(generateAdapter = true)
+@Serializable
 data class Meta(
-    @Json(name = "createdAt")
-    val createdAt: String,
-    @Json(name = "updatedAt")
-    val updatedAt: String,
-    @Json(name = "barcode")
+    @SerialName("barcode")
     val barcode: String,
-    @Json(name = "qrCode")
-    val qrCode: String
+    @SerialName("createdAt")
+    val createdAt: String,
+    @SerialName("qrCode")
+    val qrCode: String,
+    @SerialName("updatedAt")
+    val updatedAt: String
 )

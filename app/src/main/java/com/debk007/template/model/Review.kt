@@ -1,19 +1,19 @@
 package com.debk007.template.model
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
-@JsonClass(generateAdapter = true)
+@Serializable
 data class Review(
-    @Json(name = "rating")
-    val rating: Int,
-    @Json(name = "comment")
+    @SerialName("comment")
     val comment: String,
-    @Json(name = "date")
+    @SerialName("date")
     val date: String,
-    @Json(name = "reviewerName")
-    val reviewerName: String,
-    @Json(name = "reviewerEmail")
-    val reviewerEmail: String
+    @SerialName("rating")
+    val rating: Int,
+    @SerialName("reviewerEmail")
+    val reviewerEmail: String,
+    @SerialName("reviewerName")
+    val reviewerName: String
 )

@@ -1,53 +1,53 @@
 package com.debk007.template.model
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
-@JsonClass(generateAdapter = true)
+@Serializable
 data class ProductDetailsDto(
-    @Json(name = "id")
-    val id: Int,
-    @Json(name = "title")
-    val title: String,
-    @Json(name = "description")
-    val description: String,
-    @Json(name = "category")
-    val category: String,
-    @Json(name = "price")
-    val price: Double,
-    @Json(name = "discountPercentage")
-    val discountPercentage: Double,
-    @Json(name = "rating")
-    val rating: Double,
-    @Json(name = "stock")
-    val stock: Int,
-    @Json(name = "tags")
-    val tags: List<String>,
-    @Json(name = "brand")
-    val brand: String,
-    @Json(name = "sku")
-    val sku: String,
-    @Json(name = "weight")
-    val weight: Int,
-    @Json(name = "dimensions")
-    val dimensions: Dimensions,
-    @Json(name = "warrantyInformation")
-    val warrantyInformation: String,
-    @Json(name = "shippingInformation")
-    val shippingInformation: String,
-    @Json(name = "availabilityStatus")
+    @SerialName("availabilityStatus")
     val availabilityStatus: String,
-    @Json(name = "reviews")
-    val reviews: List<Review>,
-    @Json(name = "returnPolicy")
-    val returnPolicy: String,
-    @Json(name = "minimumOrderQuantity")
-    val minimumOrderQuantity: Int,
-    @Json(name = "meta")
-    val meta: Meta,
-    @Json(name = "images")
+    @SerialName("brand")
+    val brand: String,
+    @SerialName("category")
+    val category: String,
+    @SerialName("description")
+    val description: String,
+    @SerialName("dimensions")
+    val dimensions: Dimensions,
+    @SerialName("discountPercentage")
+    val discountPercentage: Double,
+    @SerialName("id")
+    val id: Int,
+    @SerialName("images")
     val images: List<String>,
-    @Json(name = "thumbnail")
-    val thumbnail: String
+    @SerialName("meta")
+    val meta: Meta,
+    @SerialName("minimumOrderQuantity")
+    val minimumOrderQuantity: Int,
+    @SerialName("price")
+    val price: Double,
+    @SerialName("rating")
+    val rating: Double,
+    @SerialName("returnPolicy")
+    val returnPolicy: String,
+    @SerialName("reviews")
+    val reviews: List<Review>,
+    @SerialName("shippingInformation")
+    val shippingInformation: String,
+    @SerialName("sku")
+    val sku: String,
+    @SerialName("stock")
+    val stock: Int,
+    @SerialName("tags")
+    val tags: List<String>,
+    @SerialName("thumbnail")
+    val thumbnail: String,
+    @SerialName("title")
+    val title: String,
+    @SerialName("warrantyInformation")
+    val warrantyInformation: String,
+    @SerialName("weight")
+    val weight: Int
 )
