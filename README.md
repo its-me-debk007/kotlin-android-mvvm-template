@@ -13,14 +13,14 @@ A simple+lightweight template for a Jetpack Compose app with Navigation, Retrofi
 
 - Project fully in `Jetpack Compose`
 - Jetpack Compose Navigation
-- Retrofit *(Fully setup with a working sample api call)*
+- Retrofit *(Fully setup with a **working** sample API Call)*
 - MVVM Architecture
 - Kotlin DSL
 - [Chucker](https://github.com/ChuckerTeam/chucker)
-- Dependency versions managed `Gradle Version Catalog`
+- `Gradle Version Catalog` for dependency management
 - `Dependabot` *(with a weekly schedule)*
-- `GitHub Actions` for building apk and uploading artifact
-- Glide *(for image loading)*
+- CI/CD using `GitHub Actions` for building apk and uploading artifact
+- Coil *(for image loading)*
 
 
 ## Getting Started 👣
