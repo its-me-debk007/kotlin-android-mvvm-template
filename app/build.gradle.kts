@@ -72,7 +72,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
     implementation(libs.activity.compose)
@@ -88,8 +87,9 @@ dependencies {
     androidTestImplementation(libs.ui.test.junit4)
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
-    implementation(libs.retrofit)
-    implementation(libs.kotlinx.serialization.converter)
+    implementation(libs.ktor)
+    implementation(libs.ktor.client.content.negotiation)
+    implementation(libs.ktor.serialization.kotlinx.json)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.coil)
     implementation(libs.coroutines.android)
@@ -98,6 +98,4 @@ dependencies {
     ksp(libs.hilt.kapt)
     implementation(libs.hilt.navigation.compose)
     implementation(libs.navigation.compose)
-    debugImplementation(libs.chucker.debug)
-    releaseImplementation(libs.chucker.release)
 }

@@ -1,21 +1,14 @@
 package com.debk007.template.di
 
-import android.content.Context
-import com.chuckerteam.chucker.api.ChuckerInterceptor
-import com.debk007.template.BuildConfig
-import com.debk007.template.network.ApiService
+import com.debk007.template.network.NetworkHttpClient
 import com.debk007.template.repository.Repository
 import com.debk007.template.repository.RepositoryImpl
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import okhttp3.OkHttpClient
-import retrofit2.Retrofit
-import kotlinx.serialization.json.Json
-import okhttp3.MediaType.Companion.toMediaType
-import retrofit2.converter.kotlinx.serialization.asConverterFactory
+import io.ktor.client.HttpClient
 import javax.inject.Singleton
 
 @Module
@@ -23,23 +16,10 @@ import javax.inject.Singleton
 object NetworkModule {
     @Provides
     @Singleton
-    fun providesOkHttpClient(@ApplicationContext context: Context): OkHttpClient =
-        OkHttpClient.Builder()
-            .addInterceptor(ChuckerInterceptor(context))
-            .build()
+    fun providesHttpClient(networkHttpClient: NetworkHttpClient): HttpClient =
+        networkHttpClient.getHttpClient()
 
     @Provides
     @Singleton
-    fun providesRetrofit(okHttpClient: OkHttpClient): ApiService = Retrofit.Builder()
-        .baseUrl(BuildConfig.BASE_URL)
-        .addConverterFactory(
-            Json.asConverterFactory(
-            "application/json; charset=UTF8".toMediaType()))
-        .client(okHttpClient)
-        .build()
-        .create(ApiService::class.java)
-
-    @Provides
-    @Singleton
-    fun providesRepository(apiService: ApiService): Repository = RepositoryImpl(apiService)
+    fun providesRepository(repositoryImpl: RepositoryImpl): Repository = repositoryImpl
 }

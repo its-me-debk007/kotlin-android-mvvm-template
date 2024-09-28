@@ -9,12 +9,11 @@ lifecycle-runtime-ktx = "2.8.6"
 activity-compose = "1.9.2"
 compose-bom = "2024.09.02"
 kotlinx-serialization-json = "1.7.3"
-retrofit = "2.11.0"
+ktor = "2.3.12"
 coroutines = "1.9.0"
 hilt-navigation-compose = "1.2.0"
 dagger-hilt = "2.52"
 coil = "2.7.0"
-chucker = "4.0.0"
 navigation-compose = "2.8.1"
 ksp = "2.0.20-1.0.25"
 
@@ -39,9 +38,10 @@ material3 = { group = "androidx.compose.material3", name = "material3" }
 coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
 coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
 
-# Retrofit
-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
-kotlinx-serialization-converter = { group = "com.squareup.retrofit2", name = "converter-kotlinx-serialization", version.ref = "retrofit" }
+# ktor
+ktor = { group = "io.ktor", name = "ktor-client-android", version.ref = "ktor" }
+ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
 
 # Dagger Hilt
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "dagger-hilt" }
@@ -53,10 +53,6 @@ navigation-compose = { group = "androidx.navigation", name = "navigation-compose
 
 # Glide
 coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
-
-# Chucker
-chucker-debug = { group = "com.github.chuckerteam.chucker", name = "library", version.ref = "chucker" }
-chucker-release = { group = "com.github.chuckerteam.chucker", name = "library-no-op", version.ref = "chucker" }
 
 [plugins]
 com-android-application = { id = "com.android.application", version.ref = "agp" }
