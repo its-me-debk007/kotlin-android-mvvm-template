@@ -14,6 +14,8 @@ A simple+lightweight template for a Jetpack Compose app with Navigation, Retrofi
 - Project fully in `Jetpack Compose`
 - Jetpack Compose Navigation
 - Retrofit *(Fully setup with a **working** sample API Call)*
+> [!NOTE]
+> for API Call using **ktor**, switch to `ktor` branch
 - MVVM Architecture
 - Kotlin DSL
 - `Gradle Version Catalog` for dependency management
