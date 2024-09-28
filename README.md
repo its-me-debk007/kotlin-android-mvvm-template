@@ -16,7 +16,6 @@ A simple+lightweight template for a Jetpack Compose app with Navigation, Retrofi
 - Retrofit *(Fully setup with a **working** sample API Call)*
 - MVVM Architecture
 - Kotlin DSL
-- [Chucker](https://github.com/ChuckerTeam/chucker)
 - `Gradle Version Catalog` for dependency management
 - `Dependabot` *(with a weekly schedule)*
 - CI/CD using `GitHub Actions` for building apk and uploading artifact
@@ -28,7 +27,6 @@ A simple+lightweight template for a Jetpack Compose app with Navigation, Retrofi
 - Click on [![Use this template](https://img.shields.io/badge/-Use%20this%20template-499D95?style=for-the-badge)](https://github.com/new?template_name=kotlin-android-mvvm-template&template_owner=its-me-debk007) button to create a new repository from this template
 - Few TODOs are added, such as changing *package name*, *server base url*, *api endpoints*, etc to guide through the project *(just type TODO after pressing SHIFT key twice in Android Studio, to search for the TODOs)*
 - Enable Dependabot in repo settings *(for ref, a [30 sec video](https://www.youtube.com/watch?v=yvXKlDgiGHo))*
-- Grant notification permission to app in order for Chucker to work
 
 
 ## Project Structure 🗺️📐🛠️

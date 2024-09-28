@@ -72,7 +72,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
     implementation(libs.activity.compose)
@@ -98,6 +97,4 @@ dependencies {
     ksp(libs.hilt.kapt)
     implementation(libs.hilt.navigation.compose)
     implementation(libs.navigation.compose)
-    debugImplementation(libs.chucker.debug)
-    releaseImplementation(libs.chucker.release)
 }
