@@ -3,7 +3,7 @@ name: Perform tests and build apk
 on:
   push:
     branches:
-      - main
+      - ktor
 
 jobs:
   build:
