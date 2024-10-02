@@ -20,7 +20,7 @@ A simple+lightweight template for a Jetpack Compose app with Navigation, Retrofi
 - Kotlin DSL
 - `Gradle Version Catalog` for dependency management
 - `Dependabot` *(with a weekly schedule)*
-- CI/CD using `GitHub Actions` for building apk and uploading artifact
+- `GitHub Actions` CI/CD pipeline to **run lint checks** + **perform unit tests** + **build and uploading apk**
 - Coil *(for image loading)*
 
 

@@ -1,4 +1,4 @@
-name: Perform tests and build apk
+name: Run lint checks + perform unit tests + build and upload apk
 
 on:
   push:
