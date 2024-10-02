@@ -36,7 +36,7 @@ A simple+lightweight template for a Jetpack Compose app with Navigation, Retrofi
 The project includes a single module **`app`**, with following packages:
 
 - **`di`:** contains Dagger-Hilt Module
-- **`network`:** includes api service containing api endpoints & type of request
+- **`network`:** includes NetworkHttpClient that provides a ktor HttpClient
 - **`model`:** contains response data class from the server
 - **`repository`:** contains repository interface & its implementation
 - **`presentation`:** signifies the presentation layer
