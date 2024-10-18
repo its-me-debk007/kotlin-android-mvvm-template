@@ -8,7 +8,6 @@ A simple+lightweight template for a Jetpack Compose app with Navigation, Retrofi
 
 > ***"Every line of code should be written once, and only once." - Ron Jeffries***
 
-
 ## Features 🎨
 
 - Project fully in `Jetpack Compose`
