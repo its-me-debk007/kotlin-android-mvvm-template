@@ -15,7 +15,7 @@ hilt-navigation-compose = "1.2.0"
 dagger-hilt = "2.52"
 coil = "2.7.0"
 navigation-compose = "2.8.3"
-ksp = "2.0.21-1.0.25"
+ksp = "2.0.21-1.0.26"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
