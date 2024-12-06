@@ -7,6 +7,11 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.kotlinx.serialization)
+    alias(libs.plugins.detekt)
+}
+
+detekt {
+    config.setFrom(file("$rootDir/config/detekt/detekt.yml"))
 }
 
 android {
