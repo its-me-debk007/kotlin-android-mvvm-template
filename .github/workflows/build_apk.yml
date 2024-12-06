@@ -1,4 +1,4 @@
-name: Run lint checks + perform unit tests + build and upload apk
+name: detekt code smell analysis + run unit tests + build & upload apk
 
 on:
   push:
