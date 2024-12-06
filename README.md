@@ -18,6 +18,7 @@ A simple+lightweight template for a Jetpack Compose app with Navigation, Retrofi
 - MVVM Architecture
 - Kotlin DSL
 - `Gradle Version Catalog` for dependency management
+- `detekt` for code smell analysis - configured for **Jetpack Compose**
 - `Dependabot` *(with a weekly schedule)*
 - `GitHub Actions` CI/CD pipeline to **run lint checks** + **perform unit tests** + **build and upload apk**
 - Coil *(for image loading)*

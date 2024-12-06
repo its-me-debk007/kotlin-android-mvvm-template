@@ -7,18 +7,23 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.kotlinx.serialization)
+    alias(libs.plugins.detekt)
+}
+
+detekt {
+    config.setFrom(file("$rootDir/config/detekt/detekt.yml"))
 }
 
 android {
     // TODO: Set Namespace
     namespace = "com.debk007.template"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         // TODO: Set Package Name
         applicationId = "com.debk007.template"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -54,11 +59,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true

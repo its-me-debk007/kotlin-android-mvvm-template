@@ -1,4 +1,4 @@
-name: Run lint checks + perform unit tests + build and upload apk
+name: detekt code smell analysis + run unit tests + build & upload apk
 
 on:
   push:
@@ -22,14 +22,14 @@ jobs:
       - name: Make Gradle executable
         run: chmod +x ./gradlew
 
-      - name: lint check
-        run: ./gradlew lintDebug
+      - name: detekt check
+        run: ./gradlew detekt
 
-      - name: Upload lint check report
+      - name: Upload detekt check report
         uses: actions/upload-artifact@v3
         with:
-          name: lint-results-debug
-          path: app/build/reports/lint-results-debug.html
+          name: detekt-results-debug
+          path: app/build/reports/detekt/detekt.html
 
       - name: Perform unit tests
         run: ./gradlew test
