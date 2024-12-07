@@ -3,7 +3,6 @@ package com.debk007.template.di
 import com.debk007.template.network.NetworkHttpClient
 import com.debk007.template.repository.Repository
 import com.debk007.template.repository.RepositoryImpl
-import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
