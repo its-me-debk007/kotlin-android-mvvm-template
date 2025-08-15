@@ -17,13 +17,13 @@ detekt {
 android {
     // TODO: Set Namespace
     namespace = "com.debk007.template"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         // TODO: Set Package Name
         applicationId = "com.debk007.template"
         minSdk = 24
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
