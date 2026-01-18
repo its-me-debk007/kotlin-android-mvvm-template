@@ -13,6 +13,13 @@ detekt {
     config.setFrom(file("$rootDir/config/detekt/detekt.yml"))
 }
 
+kotlin {
+    compilerOptions {
+        languageVersion = org.jetbrains.kotlin.gradle.dsl.KotlinVersion.KOTLIN_2_0
+         jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
+    }
+}
+
 android {
     // TODO: Set Namespace
     namespace = "com.debk007.template"
