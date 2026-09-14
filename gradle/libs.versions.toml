@@ -14,7 +14,7 @@ coroutines = "1.11.0"
 hilt-navigation-compose = "1.4.0"
 dagger-hilt = "2.60.1"
 coil = "2.7.0"
-navigation-compose = "2.9.8"
+navigation-compose = "2.10.1"
 ksp = "2.3.11"
 
 [libraries]
